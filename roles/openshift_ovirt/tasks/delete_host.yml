@@ -1,0 +1,18 @@
+- name: Power off virtual machine {{ virtual_machine_names[item.hostname] }}
+  ovirt_vm:
+    auth: '{{ ovirt_auth }}'
+    name: '{{ virtual_machine_names[item.hostname] }}'
+    cluster: '{{ ovirt.cluster_name }}'
+    force: True
+    state: stopped
+
+- name: Delete virtual machine {{ virtual_machine_names[item.hostname] }}
+  ovirt_vm:
+    auth: '{{ ovirt_auth }}'
+    name: '{{ virtual_machine_names[item.hostname] }}'
+    cluster: '{{ ovirt.cluster_name }}'
+    state: absent
+
+- name: Delete virtual machine boot ISO
+  include_tasks: delete_boot_iso.yml
+  when: openshift_install_config.static_ips.enabled

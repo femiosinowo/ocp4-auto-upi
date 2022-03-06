@@ -1,0 +1,13 @@
+- name: Define existing vms
+  import_role:
+    name: openshift_libvirt_common
+    tasks_from: get_existing_vms.yml
+
+- name: Pass ignition data in the firmware config
+  set_fact:
+    libvirt_pass_ignition_via_fwcfg: True
+
+- name: Create virtual machines that don't exist
+  include_tasks: deploy_host.yml
+  when: virtual_machine_names[item.hostname] not in libvirt_existing_vms
+  with_items: '{{ openshift_cluster_hosts }}'

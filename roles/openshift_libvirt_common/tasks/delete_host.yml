@@ -1,0 +1,29 @@
+- name: Query the virtual machine {{ virtual_machine_names[item.hostname] }}
+  virt:
+    name: '{{ item.hostname }}.{{ openshift_install_config.cluster_domain }}'
+    command: info
+  register: libvirt_info
+  become: True
+
+- name: Shutdown the virtual machine {{ virtual_machine_names[item.hostname] }}
+  virt:
+    name: '{{ item.hostname }}.{{ openshift_install_config.cluster_domain }}'
+    command: destroy
+  when: libvirt_info[virtual_machine_names[item.hostname]].state == 'running'
+  become: True
+
+- name: Delete the virtual machine {{ virtual_machine_names[item.hostname] }}
+  virt:
+    name: '{{ item.hostname }}.{{ openshift_install_config.cluster_domain }}'
+    command: undefine
+  become: True
+
+- name: Delete a volume that contains the machine disk image
+  import_tasks: delete_volume.yml
+  vars:
+    libvirt_volume_name: '{{ virtual_machine_names[item.hostname] }}'
+
+- name: Delete a volume that holds ignition data
+  import_tasks: delete_volume.yml
+  vars:
+    libvirt_volume_name: '{{ virtual_machine_names[item.hostname] }}-ign'

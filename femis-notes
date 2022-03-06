@@ -1,0 +1,8 @@
+Ingress taints
+https://access.redhat.com/solutions/6262581
+https://access.redhat.com/solutions/5507511
+
+Troubleshooting
+https://github.com/openshift/installer/blob/master/docs/user/troubleshooting.md#etcd-is-not-running
+
+

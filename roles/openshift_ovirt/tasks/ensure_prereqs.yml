@@ -1,0 +1,31 @@
+- name: Install Python SDK for oVirt Engine API used by Ansible to talk to oVirt
+  yum:
+    name: '{{ rpm_name["python-ovirt-engine-sdk4"] }}'
+    state: present
+  become: True
+
+- name: Read CoreOS stream
+  import_role:
+    name: openshift_common
+    tasks_from: read_coreos_stream.yml
+
+- name: Download the CoreOS image
+  import_role:
+    name: openshift_common
+    tasks_from: download_coreos.yml
+  vars:
+    download_coreos_url: '{{ coreos.openstack_qcow2_url }}'
+    download_coreos_checksum: '{{ coreos.openstack_qcow2_checksum }}'
+
+- name: Set image filename
+  set_fact:
+    ovirt_image_filename: '{{ download_coreos_image_filename }}'
+
+- name: Obtain image info
+  command: file {{ ovirt_image_filename }}
+  changed_when: False
+  register: ovirt_image_info
+
+- name: Calculate image size in GiB
+  set_fact:
+    ovirt_image_size: '{{ (ovirt_image_info.stdout_lines[0].split()[5] | int / 2**30) | round(0, "ceil") | int }}'

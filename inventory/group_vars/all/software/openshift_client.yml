@@ -1,0 +1,14 @@
+ocp_client_url_prefix: 'https://mirror.openshift.com/pub/openshift-v4/clients/ocp'
+okd_client_url_prefix: 'https://github.com/openshift/okd/releases/download'
+
+openshift_client_versions:
+  ocp:
+    archive_url:   '{{ ocp_client_url_prefix }}/{{ openshift_install_config.version }}/openshift-client-linux-{{ openshift_install_config.version }}.tar.gz'
+    sha256sum_url: '{{ ocp_client_url_prefix }}/{{ openshift_install_config.version }}/sha256sum.txt'
+  okd:
+    archive_url:   '{{ okd_client_url_prefix }}/{{ openshift_install_config.version }}/openshift-client-linux-{{ openshift_install_config.version }}.tar.gz'
+    sha256sum_url: '{{ okd_client_url_prefix }}/{{ openshift_install_config.version }}/sha256sum.txt'
+
+openshift_client:
+  archive_url:   '{{ openshift_client_versions[openshift_install_config.distribution].archive_url }}'
+  sha256sum_url: '{{ openshift_client_versions[openshift_install_config.distribution].sha256sum_url }}'

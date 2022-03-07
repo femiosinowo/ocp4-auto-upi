@@ -82,3 +82,34 @@ openshift_install_config:
   # repositories like quay.io, registry.connect.redhat.com, registry.redhat.io and
   # also keys for authenticating against the cloud.openshift.com itself.
   pull_secret: '{"auths":{"cloud.openshift.com":{"auth":"b3BlbnNoaWZ0LXJlbGVhc2UtZGV2K29sdXdhZmVtaW9zaW5vd28xaWdwcTkzYjUwaXpiNjB6ajBjNnJ4YXBmc3g6VTI5M0ZUWDNRWjBXVEw3T1JCQlNTM0o5RUNTTzFSMUJaUVMzVjFISFRLNDJGUjlIOVBPMkdXN082UVZMOUpYRQ==","email":"oluwafemi.osinowo@outlook.com"},"quay.io":{"auth":"b3BlbnNoaWZ0LXJlbGVhc2UtZGV2K29sdXdhZmVtaW9zaW5vd28xaWdwcTkzYjUwaXpiNjB6ajBjNnJ4YXBmc3g6VTI5M0ZUWDNRWjBXVEw3T1JCQlNTM0o5RUNTTzFSMUJaUVMzVjFISFRLNDJGUjlIOVBPMkdXN082UVZMOUpYRQ==","email":"oluwafemi.osinowo@outlook.com"},"registry.connect.redhat.com":{"auth":"NTIzOTYwODd8dWhjLTFJR1BxOTNCNTBpWmI2MFpKMEM2cnhBcEZTeDpleUpoYkdjaU9pSlNVelV4TWlKOS5leUp6ZFdJaU9pSTFNVFk1TW1VMU1UUXhOMkkwTTJZME9XRXlOVE01WkRCaU5EQTFNRFkxTmlKOS5maGU1OXFaVjlTZmI0Q2kxQkRReG12U25WQzBpZC05YlJLSlV2UUpaczR0d0NkbEZuZng1c2ZRaFdkVDgzMnVsQmlWNFlqekJNM2J5MlBfM041M1hTTXhxS3FZQkNuakNWck9OZjhjSWdkTXh2V25oTVV5SzdrZVkwcU5iM3h1aU9YUjVvV3FjeWVoeVgwRzBqdUlya01NUTRTcnVtcHVkdmxockE1eWtvMzNfRzlpaU9YQklzVmY5TmxLb1NyRDNMOFZkNlByTHQxNFRGX3Y5bHJDWEs5NV9sY3dqNV9jVWpTaEFILTdoLXJvOG1kNlptWVBtMlVxeDFkNFNfN3hJWDItaUtXeUl6ZEJjN196OXVEUlRPRGFiLVgyOG81YmYtcjdfazFxOHk2eHE1dWhQV0tRbGFRakhyVU5tYll0LTFydzVNbFM5X3NBZ2YxMjk5YTFPZVlsWTFKVG1wdHhma0hjc2prdGUyZDRiQWdPeGhiYVpfRklIY1h6SjNndHpZOEpnYXFncnkyU2JsWUFRNHF3bkNYanlkYThDa2J0WC1YRzZILVdUUGo2SUJmZEhpbjRON1RqT0FrVEtjYXQ3U09VenREQkZKSVJvTzg4SFBjR2ZFaG9JWEQ4NjFlNERoVW4tbFZ0RVBmSXhJS2FEZTE5NDRZTE9SYXZRMWtvLUNMZTBQX2JvUkgwQzJYZDBmaGktenVVZllZWmVkMUxqQlR0ZlY3YU9tYUdFdkVyYVN6MXdha0hweW5yNkZrMHphb1NUbGk3Smt0a3lISl84eUIyaFZaS0RHNkRkdjk1UGZqMGtxMHg3Vkl2WDFoV2l3RE9jLUxlTlo3aUd6Rjl6c3FHZldreUFGUWRqdkRGRHNXWjlhaTExX1VQcVp1cUZjcF8yZ0ZnRk12WQ==","email":"oluwafemi.osinowo@outlook.com"},"registry.redhat.io":{"auth":"NTIzOTYwODd8dWhjLTFJR1BxOTNCNTBpWmI2MFpKMEM2cnhBcEZTeDpleUpoYkdjaU9pSlNVelV4TWlKOS5leUp6ZFdJaU9pSTFNVFk1TW1VMU1UUXhOMkkwTTJZME9XRXlOVE01WkRCaU5EQTFNRFkxTmlKOS5maGU1OXFaVjlTZmI0Q2kxQkRReG12U25WQzBpZC05YlJLSlV2UUpaczR0d0NkbEZuZng1c2ZRaFdkVDgzMnVsQmlWNFlqekJNM2J5MlBfM041M1hTTXhxS3FZQkNuakNWck9OZjhjSWdkTXh2V25oTVV5SzdrZVkwcU5iM3h1aU9YUjVvV3FjeWVoeVgwRzBqdUlya01NUTRTcnVtcHVkdmxockE1eWtvMzNfRzlpaU9YQklzVmY5TmxLb1NyRDNMOFZkNlByTHQxNFRGX3Y5bHJDWEs5NV9sY3dqNV9jVWpTaEFILTdoLXJvOG1kNlptWVBtMlVxeDFkNFNfN3hJWDItaUtXeUl6ZEJjN196OXVEUlRPRGFiLVgyOG81YmYtcjdfazFxOHk2eHE1dWhQV0tRbGFRakhyVU5tYll0LTFydzVNbFM5X3NBZ2YxMjk5YTFPZVlsWTFKVG1wdHhma0hjc2prdGUyZDRiQWdPeGhiYVpfRklIY1h6SjNndHpZOEpnYXFncnkyU2JsWUFRNHF3bkNYanlkYThDa2J0WC1YRzZILVdUUGo2SUJmZEhpbjRON1RqT0FrVEtjYXQ3U09VenREQkZKSVJvTzg4SFBjR2ZFaG9JWEQ4NjFlNERoVW4tbFZ0RVBmSXhJS2FEZTE5NDRZTE9SYXZRMWtvLUNMZTBQX2JvUkgwQzJYZDBmaGktenVVZllZWmVkMUxqQlR0ZlY3YU9tYUdFdkVyYVN6MXdha0hweW5yNkZrMHphb1NUbGk3Smt0a3lISl84eUIyaFZaS0RHNkRkdjk1UGZqMGtxMHg3Vkl2WDFoV2l3RE9jLUxlTlo3aUd6Rjl6c3FHZldreUFGUWRqdkRGRHNXWjlhaTExX1VQcVp1cUZjcF8yZ0ZnRk12WQ==","email":"oluwafemi.osinowo@outlook.com"}}}'
+  
+  
+  rpm_name_map:
+  RedHat:
+    default:
+      python-jsonpatch: python-jsonpatch
+      python-ovirt-engine-sdk4: python-ovirt-engine-sdk4
+      python-dns: python-dns
+      libvirt-python: libvirt-python
+      python-pyghmi: python-pyghmi
+      python-pyvmomi: python-pyvmomi
+    '8':
+      python-jsonpatch: python3-jsonpatch
+      python-ovirt-engine-sdk4: python3-ovirt-engine-sdk4
+      python-dns: python3-dns
+      libvirt-python: libvirt-python3
+      python-pyghmi: python3-pyghmi
+      python-pyvmomi: python3-pyvmomi
+
+  Fedora:
+    default:
+      python-jsonpatch: python3-jsonpatch
+      python-ovirt-engine-sdk4: python3-ovirt-engine-sdk4
+      python-dns: python3-dns
+      libvirt-python: python3-libvirt
+      python-pyghmi: python3-pyghmi
+      python-pyvmomi: python3-pyvmomi
+
+rpm_name: >
+  {{ rpm_name_map[ansible_distribution][ansible_distribution_major_version]
+       | default(rpm_name_map[ansible_distribution]['default']) }}

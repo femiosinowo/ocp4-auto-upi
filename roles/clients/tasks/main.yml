@@ -17,6 +17,7 @@
     src: '{{ helper.install_bin_dir }}/{{ openshift_installer.archive_url | basename }}'
     dest: '{{ helper.install_bin_dir }}'
     creates: '{{ helper.install_exe }}'
+    remote_src: yes
 
 - name: Download oc client archive {{ openshift_client.archive_url }}
   get_url:

@@ -31,6 +31,7 @@
     src: '{{ helper.install_bin_dir }}/{{ openshift_client.archive_url | basename }}'
     dest: '{{ helper.install_bin_dir }}'
     creates: '{{ helper.oc_exe }}'
+    remote_src: yes
 
 - name: Get installer info
   command: '{{ helper.install_exe }} version'

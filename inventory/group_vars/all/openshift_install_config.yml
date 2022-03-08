@@ -55,7 +55,7 @@ openshift_install_config:
   # When you deploy the cluster, this public SSH key is added to the core user’s
   # ~/.ssh/authorized_keys list. You can use this key to SSH into the OpenShift nodes
   # as the user core. By default, local user's public SSH key is added.
-  ssh_key: '{{ lookup("file", "/root/.ssh/id_rsa.pub") }}'
+  ssh_key: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCs32qztsS6q891fuImhge6yG1yvmjTaxfJAWCluRBC1vGq5BRNr47mvwV2yP7QQpuKyVEWXuFrZVMshuskH2dQr6zIVPudS6aCopZtYwBZgaf4aKXh9WKco4ibBgqzUb22m2gCDCObFR4nBcIx604cxKFvdRbG+K6BRyrILTyTTJ7I99ju2yq3pGBjc1SndDGsDJcAya54tcvjlAhAeJvvEudXve7Mazu9+eP/EZPtaIX5XapoyqChH70SRJ0QHZFX1c6hgvbiMoYlU18XSSggledNawy+94GcywiQ2z2bLh48DOuf0xmaXEpgGfqsw0VUmR3JVWWg1DJHg8q1z8somlSbms3yIu3NyqgZbJwQu73k21kNJD+SCjC2+nNAp1ap7zxzzmOqLGObri10DgaagKn8paD6v9q4Lr6S82BfBaSEWccR/hDynUWg7bMmBqSjyg8iXJiYX/CLPsZezkApaHEMqQw83GkUSBhjbzhsPY+P7rSpFkm8+jo57cQ29M0= root@bastion.paosin.local'
   # This is a JSON formatted pull secret that you can obtain at
   # https://cloud.redhat.com when installing a new OpenShift cluster. There is a
   # button "Download pull secret" that downloads this pull secret for you.
